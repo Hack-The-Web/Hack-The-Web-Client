@@ -4,9 +4,11 @@ import com.hack.client.api.GameClient
 import com.hack.client.api.network.login.LoginInformation
 import com.hack.client.ui.models.LoginModel
 import javafx.beans.binding.Bindings
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
+import kotlinx.coroutines.flow.flowOf
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
+import kotlinx.coroutines.javafx.JavaFx
 import tornadofx.*
 
 class LoginView : View("Hack The Web") {
@@ -34,12 +36,15 @@ class LoginView : View("Hack The Web") {
                             set("password", loginModel.password.get())
                             loginModel.config.save()
                         }
-                        GlobalScope.launch(Dispatchers.IO) {
-                            client.connect(
-                                loginModel.username.get(),
-                                loginModel.password.get()
-                            )
-                        }
+                        flowOf(client)
+                            .onEach {
+                                client.connect(loginModel.username.get(), loginModel.password.get()) {
+                                    flowOf(this@LoginView)
+                                        .onEach {
+                                            it.replaceWith(CommandView::class, sizeToScene = true, centerOnScreen = true)
+                                        }.launchIn(CoroutineScope(Dispatchers.JavaFx))
+                                }
+                            }.launchIn(CoroutineScope(Dispatchers.IO))
                     }
                 }
             }

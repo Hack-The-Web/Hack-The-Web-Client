@@ -4,6 +4,7 @@ import com.hack.client.api.GameClient
 import com.hack.client.api.network.login.LoginInformation
 import com.hack.client.api.session.NetworkSession
 import com.hack.network.channel.ClientChannelInitializer
+import com.hack.network.channel.packets.IncomingPacket
 import com.hack.network.channel.packets.OutgoingPacket
 import io.netty.bootstrap.Bootstrap
 import io.netty.channel.Channel
@@ -17,20 +18,15 @@ class NetworkClient(private val host: String, private val port: Int) : GameClien
 
     private val bootstrap = Bootstrap()
     private val eventGroup = NioEventLoopGroup()
-    private val dispatcher = eventGroup.asCoroutineDispatcher()
     private lateinit var channel: Channel
 
-    override val session: NetworkSession<OutgoingPacket> by lazy {
-        channel.attr(Session.SESSION_KEY).get()
-    }
-
-    override fun connect(username: String, password: String) {
+    override fun connect(username: String, password: String, onSuccessfulLogin: () -> Unit) {
         try {
             bootstrap
                 .group(eventGroup)
                 .channel(NioSocketChannel::class.java)
                 .option(ChannelOption.SO_KEEPALIVE, true)
-                .handler(ClientChannelInitializer(LoginInformation(username, password)))
+                .handler(ClientChannelInitializer(LoginInformation(username, password), onSuccessfulLogin))
 
             val f = bootstrap.connect(host, port).sync()
             val channel = f.channel()
@@ -39,6 +35,10 @@ class NetworkClient(private val host: String, private val port: Int) : GameClien
         } finally {
             eventGroup.shutdownGracefully()
         }
+    }
+
+    override fun shutdown() {
+        eventGroup.shutdownGracefully()
     }
 
     companion object {

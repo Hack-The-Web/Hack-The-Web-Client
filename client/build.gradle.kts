@@ -9,5 +9,6 @@ javafx {
 
 dependencies {
     implementation("no.tornado:tornadofx:2.0.0-SNAPSHOT")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-javafx:1.5.1")
     implementation(project(":network-api"))
 }

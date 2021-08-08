@@ -6,12 +6,12 @@ import com.hack.network.channel.handshake.HandshakeEncoder
 import io.netty.channel.ChannelInitializer
 import io.netty.channel.socket.nio.NioSocketChannel
 
-class ClientChannelInitializer(val loginInfo: LoginInformation) : ChannelInitializer<NioSocketChannel>() {
+class ClientChannelInitializer(val loginInfo: LoginInformation, val onSuccessfulLogin: () -> Unit) : ChannelInitializer<NioSocketChannel>() {
     override fun initChannel(ch: NioSocketChannel) {
         with(ch.pipeline()) {
             addLast("decoder", HandshakeDecoder())
             addLast("encoder", HandshakeEncoder())
-            addLast("handler", ClientChannelHandler(loginInfo))
+            addLast("handler", ClientChannelHandler(loginInfo, onSuccessfulLogin))
         }
     }
 }

@@ -1,9 +1,12 @@
 package com.hack.client.api.session
 
-interface NetworkSession<P> {
+import com.hack.client.api.network.packets.GamePacketEncoder
+import com.hack.client.api.network.packets.IncomingPacket
 
-    fun sendMessage(message: Any)
+interface NetworkSession {
 
-    fun handleIncomingPacket(packet: P)
+    fun sendOutgoingPacket(opcode: Int, transformer: GamePacketEncoder)
+
+    fun handleIncomingPacket(packet: IncomingPacket)
 
 }
