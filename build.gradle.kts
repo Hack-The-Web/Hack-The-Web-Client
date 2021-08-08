@@ -12,9 +12,12 @@ subprojects {
 
     repositories {
         mavenCentral()
+        maven("https://oss.sonatype.org/content/repositories/snapshots/")
     }
 
     dependencies {
         "implementation"(kotlin("stdlib"))
+        "implementation"("io.insert-koin:koin-core:3.0.2")
+        "implementation"("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.1")
     }
 }
