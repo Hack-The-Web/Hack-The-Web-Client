@@ -20,7 +20,7 @@ class NetworkClient(private val host: String, private val port: Int) : GameClien
     private val eventGroup = NioEventLoopGroup()
     private lateinit var channel: Channel
 
-    override fun connect(username: String, password: String, onSuccessfulLogin: () -> Unit) {
+    override fun connect(username: String, password: String, onSuccessfulLogin: (NetworkSession) -> Unit) {
         try {
             bootstrap
                 .group(eventGroup)

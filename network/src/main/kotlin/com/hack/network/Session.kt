@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.MutableSharedFlow
 import java.io.ByteArrayOutputStream
 import java.io.DataOutputStream
 
-class Session(private val channel: ChannelHandlerContext) : NetworkSession {
+class Session(private val ctx: ChannelHandlerContext) : NetworkSession {
 
     val incomingPackets = MutableSharedFlow<IncomingPacket>(extraBufferCapacity = 255)
 
@@ -20,7 +20,8 @@ class Session(private val channel: ChannelHandlerContext) : NetworkSession {
         with(transformer) {
             data.encode()
         }
-        channel.write(OutgoingPacket(opcode, stream.toByteArray()))
+        println("Sending Outgoing Packet $opcode - ${ctx.pipeline()["encoder"]::class.java.name}")
+        ctx.channel().writeAndFlush(OutgoingPacket(opcode, stream.toByteArray()))
     }
 
     override fun handleIncomingPacket(packet: IncomingPacket) {

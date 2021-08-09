@@ -11,14 +11,13 @@ import com.hack.network.channel.packets.OutgoingPacket
 import io.netty.channel.ChannelHandlerContext
 import io.netty.channel.ChannelInboundHandlerAdapter
 
-class ClientChannelHandler(val loginInfo: LoginInformation, val onSuccessfulLogin: () -> Unit) : ChannelInboundHandlerAdapter() {
+class ClientChannelHandler(val loginInfo: LoginInformation, val onSuccessfulLogin: (Session) -> Unit) : ChannelInboundHandlerAdapter() {
 
     override fun channelActive(ctx: ChannelHandlerContext) {
         ctx.writeAndFlush(HandshakeRequest(1, 1))
     }
 
     override fun channelRead(ctx: ChannelHandlerContext, msg: Any) {
-
         if(msg is IncomingPacket) {
             val session = ctx.channel().attr(Session.SESSION_KEY).get()
             session.handleIncomingPacket(msg)
