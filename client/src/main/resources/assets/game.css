@@ -1,0 +1,62 @@
+.top-bar {
+
+    -fx-background-color: linear-gradient(to bottom, #3F3F3F 0%, #222222 100%);
+    -fx-pref-height: 80px;
+
+}
+
+.top-bar-button {
+    -fx-background-color: linear-gradient(to bottom, #3F3F3F 0%, #222222 100%);
+    -fx-text-fill: white;
+    -fx-border-radius: 0;
+}
+
+.top-bar-button:hover {
+    -fx-background-color: linear-gradient(to top, #3F3F3F 0%, #222222 100%);
+}
+
+.left-panel {
+
+    -fx-background-color: #3f3f3f;
+    -fx-border-color: #4e4e4e;
+    -fx-border-width: 2px;
+    -fx-pref-width: 220px;
+
+}
+
+.left-panel .label {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+}
+
+.left-panel-button {
+
+    -fx-border-color: #4e4e4e;
+    -fx-border-width: 1px;
+    -fx-border-style: solid hidden solid hidden;
+
+    -fx-pref-height: 40px;
+
+}
+
+.left-panel-button:hover {
+    -fx-background-color: #2b2b2b;
+}
+
+.content-header {
+
+    -fx-pref-height: 80px;
+    -fx-background-color: linear-gradient(to bottom, #FFFFFF 0%, #EEEEEE 100%);
+
+}
+
+.content-header .vbox {
+    -fx-pref-width: 80px;
+}
+
+.breadcrumb {
+    -fx-pref-height: 50px;
+    -fx-background-color: #e5e5e5;
+    -fx-border-color: #d6d6d6;
+    -fx-border-style: solid hidden solid hidden;
+}

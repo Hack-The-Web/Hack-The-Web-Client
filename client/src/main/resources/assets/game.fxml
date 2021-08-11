@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0">
+         <top>
+            <AnchorPane styleClass="top-bar" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox spacing="5.0" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Button fx:id="userBtn" mnemonicParsing="false" styleClass="top-bar-button" text="Javatar">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="USER" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="emailBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" styleClass="top-bar-button" text="E-Mail">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="ENVELOPE" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="settingBtn" layoutX="74.0" layoutY="10.0" mnemonicParsing="false" styleClass="top-bar-button" text="Settings">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="WRENCH" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="logoutBtn" layoutX="132.0" layoutY="10.0" mnemonicParsing="false" styleClass="top-bar-button" text="Logout">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="POWER_OFF" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets right="45.0" />
+                     </padding>
+                  </HBox>
+                  <Label text="Hack The Web" textFill="WHITE" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="40.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="720.0" prefWidth="100.0" spacing="0.5" styleClass="left-panel" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox fx:id="homeBtn" accessibleRole="BUTTON" alignment="CENTER_LEFT" spacing="25.0" styleClass="left-panel-button">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="16">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIconView>
+                              <Label text="Home" />
+                           </children>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </HBox>
+                        <HBox fx:id="tasksBtn" accessibleRole="BUTTON" alignment="CENTER_LEFT" layoutX="12.0" layoutY="17.0" spacing="25.0" styleClass="left-panel-button">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="TASKS" size="16">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIconView>
+                              <Label text="Task Manager" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </HBox>
+                        <HBox fx:id="softwareBtn" accessibleRole="BUTTON" alignment="CENTER_LEFT" layoutX="10.0" layoutY="60.0" spacing="25.0" styleClass="left-panel-button">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="FOLDER_OPEN" size="16">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIconView>
+                              <Label text="Software" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </HBox>
+                        <HBox fx:id="internetBtn" accessibleRole="BUTTON" alignment="CENTER_LEFT" layoutX="10.0" layoutY="97.0" spacing="25.0" styleClass="left-panel-button">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="GLOBE" size="16">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIconView>
+                              <Label text="Internet" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </HBox>
+                        <HBox fx:id="logsBtn" accessibleRole="BUTTON" alignment="CENTER_LEFT" layoutX="10.0" layoutY="138.0" spacing="25.0" styleClass="left-panel-button">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="BOOK" size="16">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIconView>
+                              <Label text="Log File" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </HBox>
+                        <HBox fx:id="hardwareBtn" accessibleRole="BUTTON" alignment="CENTER_LEFT" layoutX="10.0" layoutY="179.0" spacing="25.0" styleClass="left-panel-button">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="DESKTOP" size="16">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIconView>
+                              <Label text="Hardware" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </HBox>
+                        <HBox fx:id="universityBtn" accessibleRole="BUTTON" alignment="CENTER_LEFT" layoutX="10.0" layoutY="220.0" spacing="25.0" styleClass="left-panel-button">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="FLASK" size="16">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIconView>
+                              <Label text="University" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </HBox>
+                        <HBox fx:id="financesBtn" accessibleRole="BUTTON" alignment="CENTER_LEFT" layoutX="10.0" layoutY="261.0" spacing="25.0" styleClass="left-panel-button">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="BRIEFCASE" size="16">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIconView>
+                              <Label text="Finances" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </HBox>
+                        <HBox fx:id="hackedBtn" accessibleRole="BUTTON" alignment="CENTER_LEFT" layoutX="10.0" layoutY="302.0" spacing="25.0" styleClass="left-panel-button">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="TERMINAL" size="16">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIconView>
+                              <Label text="Hacked Database" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </HBox>
+                        <HBox fx:id="missionsBtn" accessibleRole="BUTTON" alignment="CENTER_LEFT" layoutX="10.0" layoutY="343.0" spacing="25.0" styleClass="left-panel-button">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="BUILDING" size="16">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIconView>
+                              <Label text="Missions" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </HBox>
+                        <HBox fx:id="clanBtn" accessibleRole="BUTTON" alignment="CENTER_LEFT" layoutX="10.0" layoutY="384.0" spacing="25.0" styleClass="left-panel-button">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="USERS" size="16">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIconView>
+                              <Label text="Clan" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </HBox>
+                        <HBox fx:id="rankingBtn" accessibleRole="BUTTON" alignment="CENTER_LEFT" layoutX="10.0" layoutY="425.0" spacing="25.0" styleClass="left-panel-button">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="BARS" size="16">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIconView>
+                              <Label text="Ranking" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </HBox>
+                        <HBox fx:id="fameBtn" accessibleRole="BUTTON" alignment="CENTER_LEFT" layoutX="10.0" layoutY="466.0" spacing="25.0" styleClass="left-panel-button">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="STAR" size="16">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIconView>
+                              <Label text="Fall of Fame" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </HBox>
+                        <HBox fx:id="devBtn" accessibleRole="BUTTON" alignment="CENTER_LEFT" layoutX="12.0" layoutY="509.0" spacing="25.0" styleClass="left-panel-button">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="LAPTOP" size="16">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIconView>
+                              <Label style="-fx-text-fill: red;" text="Developer Tools" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <top>
+                  <VBox BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="content-header">
+                           <children>
+                              <Label fx:id="locationLabel" text="Control Panel" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="35.0">
+                                 <font>
+                                    <Font size="31.0" />
+                                 </font>
+                              </Label>
+                              <VBox spacing="5.0" AnchorPane.rightAnchor="50.0">
+                                 <children>
+                                    <Label fx:id="addressLabel" text="255.255.255.255">
+                                       <font>
+                                          <Font size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox spacing="18.0">
+                                       <children>
+                                          <HBox spacing="5.0">
+                                             <children>
+                                                <Pane styleClass="he16-time" />
+                                                <Label fx:id="serverTime" text="2021-02-12 00:16">
+                                                   <font>
+                                                      <Font size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox spacing="5.0">
+                                             <children>
+                                                <Pane styleClass="he16-online" />
+                                                <Label fx:id="onlinePlayers" text="29">
+                                                   <font>
+                                                      <Font size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="36.0" spacing="18.0">
+                                       <children>
+                                          <Label fx:id="totalMoney" text="\$1,500" textFill="#1cc91c">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="totalBTC" layoutX="10.0" layoutY="10.0" text="BTC: 1.337" textFill="#bfb024">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane styleClass="breadcrumb">
+                           <children>
+                              <HBox fx:id="breadcrumb" alignment="CENTER_LEFT" prefHeight="102.0" prefWidth="1060.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </top>
+               <center>
+                  <AnchorPane fx:id="content" prefHeight="590.0" prefWidth="1059.0" BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+         </center>
+         <stylesheets>
+            <URL value="@game.css" />
+            <URL value="@icons.css" />
+            <URL value="@content/home.css" />
+         </stylesheets>
+      </BorderPane>
+   </children>
+</Pane>

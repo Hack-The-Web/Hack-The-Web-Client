@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="590.0" prefWidth="1062.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <stylesheets>
+      <URL value="@developer.css" />
+      <URL value="@../global.css" />
+   </stylesheets>
+   <children>
+      <TabPane layoutX="197.0" layoutY="354.0" prefHeight="590.0" prefWidth="1062.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Commands">
+            <content>
+              <AnchorPane>
+                     <children>
+                        <VBox layoutX="665.0" layoutY="14.0" prefHeight="331.0" prefWidth="383.0">
+                           <children>
+                              <HBox styleClass="legionhe-background">
+                                 <children>
+                                    <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="20.0" prefWidth="396.0" text="Command Executor">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <VBox prefHeight="386.0" prefWidth="383.0">
+                                 <children>
+                                    <TextField fx:id="commandInput" promptText="Enter command" />
+                                    <TextArea fx:id="commandOutput" editable="false" prefHeight="333.0" prefWidth="383.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="125.0" layoutY="14.0">
+                           <children>
+                              <HBox styleClass="legionhe-background">
+                                 <children>
+                                    <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="20.0" prefWidth="396.0" text="Force Mount Remote System">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <VBox>
+                                 <children>
+                                    <HBox alignment="CENTER" spacing="10.0" style="-fx-background-color: lightgrey;" styleClass="command-box">
+                                       <children>
+                                          <Label maxHeight="1.7976931348623157E308" text="Mount System" />
+                                          <TextField fx:id="addressMount" promptText="Enter address" />
+                                          <Button fx:id="mountBtn" mnemonicParsing="false" styleClass="legionhe-black-button" text="Mount" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="15.0" top="15.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="125.0" layoutY="91.0">
+                           <children>
+                              <HBox styleClass="legionhe-background">
+                                 <children>
+                                    <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="20.0" prefWidth="396.0" text="Add Software">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <VBox>
+                                 <children>
+                                    <HBox alignment="CENTER" spacing="10.0" style="-fx-background-color: lightgrey;" styleClass="command-box">
+                                       <children>
+                                          <Label maxHeight="1.7976931348623157E308" text="Name" />
+                                          <TextField fx:id="softwareName" promptText="Enter name" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="15.0" top="15.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" spacing="10.0" style="-fx-background-color: lightgrey;" styleClass="command-box">
+                                       <children>
+                                          <Label maxHeight="1.7976931348623157E308" text="Version" />
+                                          <TextField fx:id="softwareVersion" promptText="Enter version" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="15.0" top="15.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="68.0" spacing="10.0" style="-fx-background-color: lightgrey;" styleClass="command-box">
+                                       <children>
+                                          <Label maxHeight="1.7976931348623157E308" text="Extension" />
+                                          <TextField fx:id="softwareExt" promptText="Enter extension" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="15.0" top="15.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="126.0" spacing="10.0" style="-fx-background-color: lightgrey;" styleClass="command-box">
+                                       <padding>
+                                          <Insets bottom="15.0" top="15.0" />
+                                       </padding>
+                                       <children>
+                                          <Button fx:id="addSoftwareBtn" mnemonicParsing="false" styleClass="legionhe-black-button" text="Add Software" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../he16.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D height="16.0" minY="1785.0" width="16.0" />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+          </Tab>
+          <Tab text="Bank Editor">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <VBox layoutX="340.0" layoutY="98.0">
+                           <children>
+                              <HBox styleClass="legionhe-background">
+                                 <children>
+                                    <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="20.0" prefWidth="396.0" text="Edit Bank">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <VBox spacing="20.0" styleClass="command-box">
+                                 <children>
+                                    <TextField promptText="Enter bank ip address" />
+                                    <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Bank Account Number" />
+                                    <TextField layoutX="10.0" layoutY="10.0" promptText="Enter bank ip address" />
+                                    <Label alignment="CENTER" layoutX="11.0" layoutY="57.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Amount" />
+                                    <TextField layoutX="11.0" layoutY="93.0" promptText="Enter new amount" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../he16.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D height="16.0" minY="476.0" width="16.0" />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

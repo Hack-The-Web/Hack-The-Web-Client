@@ -1,0 +1,20 @@
+.progress-bar:determinate .track {
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-border-style: solid;
+    -fx-border-width: 2px;
+}
+
+.progress-bar .bar {
+    -fx-background-color: grey;
+    -fx-background-insets: 2;
+    -fx-padding: 1px;
+}
+
+.cancel-btn {
+    -fx-cursor: hand;
+}
+
+.root-background {
+    -fx-background-color: lightgrey;
+}

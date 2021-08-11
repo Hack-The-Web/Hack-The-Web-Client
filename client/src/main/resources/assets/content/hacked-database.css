@@ -1,0 +1,61 @@
+.tab-pane .tab-header-background {
+    -fx-background-color: linear-gradient(to bottom, #FFFFFF 0%, #EEEEEE 100%);
+    -fx-border-color: #cdcdcd;
+    -fx-border-style: hidden hidden solid hidden;
+    -fx-border-width: 1px;
+}
+
+.tab-pane:top .tab-header-area .headers-region .tab:selected:top {
+    -fx-background-color: linear-gradient(to top, #FFFFFF 0%, #EEEEEE 100%);
+    -fx-border-color: #cdcdcd;
+    -fx-border-style: solid solid solid solid;
+    -fx-border-width: 1px;
+}
+
+.tab-pane:top .tab-header-area .headers-region .tab {
+    -fx-background-color: linear-gradient(to bottom, #FFFFFF 0%, #EEEEEE 100%);
+    -fx-border-color: #cdcdcd;
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+}
+
+.tab-pane:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator {
+    -fx-border-style: hidden;
+}
+
+.large-icon-container {
+    -fx-pref-width: 32px;
+    -fx-pref-height: 52px;
+    -fx-background-color: linear-gradient(to bottom, #FFFFFF 0%, #EEEEEE 100%);
+    -fx-border-color: #cdcdcd;
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+}
+
+.rightBorder {
+    -fx-border-color: #cdcdcd;
+    -fx-border-style: hidden solid hidden hidden ;
+    -fx-border-width: 1px;
+}
+
+.info-border {
+    -fx-border-color: #cdcdcd;
+    -fx-border-style: hidden solid solid solid;
+    -fx-border-width: 1px;
+}
+
+.table-view .column-header,
+.table-view .column-header .filler,
+.table-view .column-header-background .filler {
+    -fx-background-color: linear-gradient(to bottom, #FFFFFF 0%, #EEEEEE 100%);
+    -fx-border-color: #cdcdcd;
+    -fx-border-style: hidden hidden solid hidden;
+    -fx-border-width: 1px;
+}
+
+.header-background {
+    -fx-background-color: linear-gradient(to bottom, #FFFFFF 0%, #EEEEEE 100%);
+    -fx-border-color: #cdcdcd;
+    -fx-border-style: hidden solid hidden solid;
+    -fx-border-width: 1px;
+}

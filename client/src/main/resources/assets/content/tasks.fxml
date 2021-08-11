@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="590.0" prefWidth="1062.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <stylesheets>
+      <URL value="@tasks.css" />
+      <URL value="@../global.css" />
+   </stylesheets>
+   <children>
+      <TabPane prefHeight="590.0" prefWidth="1062.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab fx:id="taskManagerTab" text="Task Manager">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView prefHeight="555.0" prefWidth="1062.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../he16.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D height="16.0" minX="17.0" minY="408.0" width="16.0" />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+          </Tab>
+            <Tab fx:id="processManagerTab" text="Process Manager">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView prefHeight="555.0" prefWidth="1062.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../he16.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D height="16.0" minX="17.0" minY="425.0" width="16.0" />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+            </Tab>
+            <Tab fx:id="connectionManagerTab" text="Connection Manager">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView prefHeight="555.0" prefWidth="1062.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../he16.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D height="16.0" minX="17.0" minY="442.0" width="16.0" />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

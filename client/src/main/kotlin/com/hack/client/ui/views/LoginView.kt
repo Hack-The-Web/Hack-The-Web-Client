@@ -1,9 +1,9 @@
 package com.hack.client.ui.views
 
 import com.hack.client.api.GameClient
-import com.hack.client.api.network.login.LoginInformation
 import com.hack.client.ui.models.LoginModel
 import com.hack.client.ui.scope.GameScope
+import com.hack.client.ui.views.game.GameView
 import javafx.beans.binding.Bindings
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.flowOf
@@ -42,7 +42,7 @@ class LoginView : View("Hack The Web") {
                                 client.connect(loginModel.username.get(), loginModel.password.get()) { session ->
                                     flowOf(this@LoginView)
                                         .onEach {
-                                            it.replaceWith(find(CommandView::class, GameScope(session)), sizeToScene = true, centerOnScreen = true)
+                                            it.replaceWith(find(GameView::class, GameScope(session)), sizeToScene = true, centerOnScreen = true)
                                         }.launchIn(CoroutineScope(Dispatchers.JavaFx))
                                 }
                             }.launchIn(CoroutineScope(Dispatchers.IO))

@@ -1,0 +1,42 @@
+.hardwareInfoHeader {
+
+    -fx-background-color: linear-gradient(to bottom, #FFFFFF 0%, #EEEEEE 100%);
+    -fx-pref-height: 36px;
+    -fx-border-color: #cdcdcd;
+    -fx-border-style: hidden hidden solid hidden;
+    -fx-border-width: 1px;
+}
+
+.hardwareInfoHeader-full {
+    -fx-background-color: linear-gradient(to bottom, #FFFFFF 0%, #EEEEEE 100%);
+    -fx-pref-height: 36px;
+    -fx-border-color: #cdcdcd;
+    -fx-border-style: solid solid solid solid;
+    -fx-border-width: 1px;
+}
+
+.infoPane {
+    -fx-background-color: lightgrey;
+    -fx-opacity: 0.7;
+}
+
+.icon {
+    -fx-image: url('../he16.png');
+}
+
+.table-icon {
+    -fx-pref-width: 38px;
+    -fx-pref-height: 36px;
+}
+
+.home-table {
+    -fx-border-style: solid;
+    -fx-border-color: #cdcdcd;
+    -fx-border-width: 1px;
+}
+
+.rightBorder {
+    -fx-border-color: #cdcdcd;
+    -fx-border-style: hidden solid hidden hidden ;
+    -fx-border-width: 1px;
+}

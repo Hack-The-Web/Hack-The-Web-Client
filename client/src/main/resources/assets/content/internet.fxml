@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="1060.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER" layoutX="14.0" layoutY="14.0" maxHeight="662.0" maxWidth="813.0" minHeight="-Infinity" minWidth="662.0" prefHeight="75.0" prefWidth="813.0" spacing="35.0" styleClass="address-box" AnchorPane.bottomAnchor="499.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="233.0" AnchorPane.topAnchor="14.0">
+         <children>
+            <Label maxHeight="1.7976931348623157E308" text="Domain">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" spacing="25.0">
+               <children>
+                  <TextField fx:id="domainField" promptText="Enter Address">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="domainGoBtn" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="29.0" styleClass="search-button" text="Go" />
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../he16.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D height="16.0" minY="1258.0" width="16.0" />
+                     </viewport>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <TabPane layoutX="14.0" layoutY="96.0" prefHeight="492.0" prefWidth="813.0" styleClass="internet-viewport" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="homeTab" closable="false" text="Home">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <WebView prefHeight="455.0" prefWidth="660.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../he16.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D height="16.0" minY="1309.0" width="16.0" />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+          </Tab>
+          <Tab fx:id="loginTab" closable="false" text="Login">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <VBox alignment="CENTER" layoutX="106.0" layoutY="91.0" spacing="10.0" style="-fx-border-color: black;" styleClass="login-box">
+                           <children>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <Label text="Enter username and password to continue.">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox alignment="CENTER_LEFT" styleClass="full-border">
+                                       <children>
+                                          <VBox alignment="CENTER" styleClass="login-icon">
+                                             <children>
+                                                <FontAwesomeIconView glyphName="USER" size="16" styleClass="login-icon" />
+                                             </children>
+                                          </VBox>
+                                          <TextField maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="315.0" promptText="Enter username" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <HBox alignment="CENTER_LEFT" styleClass="full-border">
+                                 <children>
+                                    <VBox alignment="CENTER" styleClass="login-icon">
+                                       <children>
+                                          <FontAwesomeIconView glyphName="LOCK" size="16" styleClass="login-icon" />
+                                       </children>
+                                    </VBox>
+                                    <PasswordField prefHeight="26.0" prefWidth="314.0" promptText="Enter password" />
+                                 </children>
+                              </HBox>
+                              <Button mnemonicParsing="false" styleClass="login-button" text="Login" translateX="40.0">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" left="255.0" top="35.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets left="50.0" right="50.0" top="25.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../he16.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D height="16.0" minY="1496.0" width="16.0" />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+          </Tab>
+            <Tab fx:id="hackTab" closable="false" text="Hack">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <VBox layoutX="219.0" layoutY="64.0">
+                           <children>
+                              <Label text="Choose your attack method">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <HBox layoutX="169.0" layoutY="110.0" spacing="5.0">
+                           <children>
+                              <VBox alignment="CENTER" styleClass="legionhe-button">
+                                 <children>
+                                    <ImageView pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../he32.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D height="32.0" width="32.0" />
+                                       </viewport>
+                                    </ImageView>
+                                    <Label style="-fx-text-fill: red;" text="Bruteforce Attack" />
+                                    <Label layoutX="16.0" layoutY="48.0" style="-fx-opacity: 0.3;" text="No cracker." />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="CENTER" styleClass="legionhe-button">
+                                 <children>
+                                    <ImageView pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../he32.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D height="32.0" minY="330.0" width="32.0" />
+                                       </viewport>
+                                    </ImageView>
+                                    <Label style="-fx-text-fill: red;" text="Exploit Attack" />
+                                    <Label layoutX="16.0" layoutY="48.0" style="-fx-opacity: 0.3;" text="No port scan." />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="CENTER" layoutX="142.0" layoutY="10.0" styleClass="legionhe-button">
+                                 <children>
+                                    <ImageView pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../he32.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D height="32.0" minY="560.0" width="32.0" />
+                                       </viewport>
+                                    </ImageView>
+                                    <Label style="-fx-text-fill: red;" text="Backdoor" />
+                                    <Label layoutX="16.0" layoutY="48.0" style="-fx-opacity: 0.3;" text="No back doors" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../he16.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D height="16.0" minY="1377.0" width="16.0" />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+            </Tab>
+            <Tab fx:id="logsTab" closable="false" disable="true" text="Log">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <TextArea layoutX="31.0" layoutY="19.0" prefHeight="361.0" prefWidth="610.0" />
+                        <HBox alignment="CENTER" layoutX="37.0" layoutY="383.0" prefHeight="58.0" prefWidth="604.0" spacing="15.0">
+                           <children>
+                              <Button mnemonicParsing="false" styleClass="legionhe-black-button" text="Edit Log" />
+                              <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" styleClass="legionhe-black-button" text="Clear Log" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../he16.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D height="16.0" minY="1394.0" width="16.0" />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+            </Tab>
+            <Tab fx:id="softwareTab" closable="false" disable="true" text="Software">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@software.css">
+                           <children>
+                              <TableView layoutX="4.0" layoutY="6.0" prefHeight="430.0" prefWidth="588.0">
+                                 <columns>
+                                    <TableColumn maxWidth="1.7976931348623157E308" minWidth="16.0" prefWidth="35.0" />
+                                    <TableColumn prefWidth="182.0" text="Software Name" />
+                                    <TableColumn minWidth="8.0" prefWidth="143.0" text="Version" />
+                                    <TableColumn prefWidth="79.0" text="Size" />
+                                    <TableColumn prefWidth="145.0" text="Actions" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                        <PieChart layoutX="600.0" layoutY="153.0" prefHeight="212.0" prefWidth="200.0" title="HDD Usage" titleSide="BOTTOM" />
+                        <VBox layoutX="625.0" layoutY="43.0" spacing="5.0">
+                           <children>
+                              <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Upload Software" />
+                              <ComboBox editable="true" prefWidth="150.0" />
+                              <HBox alignment="CENTER">
+                                 <children>
+                                    <Button mnemonicParsing="false" styleClass="upload-btn" text="Upload" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../he16.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D height="16.0" minX="17.0" minY="272.0" width="16.0" />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+            </Tab>
+            <Tab closable="false" disable="true" text="Logout">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../he16.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D height="16.0" minY="1411.0" width="16.0" />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <VBox layoutX="844.0" layoutY="50.0" spacing="10.0">
+         <children>
+            <VBox>
+               <children>
+                  <HBox alignment="CENTER" spacing="20.0" styleClass="hardwareInfoHeader">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="34.0" prefWidth="54.0" translateX="-10.0">
+                           <children>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+                                 <viewport>
+                                    <Rectangle2D height="16.0" minY="1717.0" width="16.0" />
+                                 </viewport>
+                                 <image>
+                                    <Image url="@../he16.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <styleClass>
+                              <String fx:value="table-icon" />
+                              <String fx:value="rightBorder" />
+                           </styleClass>
+                        </HBox>
+                        <Label alignment="CENTER" text="Recently Visited" translateX="-10.0">
+                           <padding>
+                              <Insets left="5.0" right="15.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <ListView prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="10.0">
+               <children>
+                  <HBox alignment="CENTER" spacing="10.0" styleClass="hardwareInfoHeader">
+                     <children>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+                                 <viewport>
+                                    <Rectangle2D height="16.0" minY="1292.0" width="16.0" />
+                                 </viewport>
+                                 <image>
+                                    <Image url="@../he16.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <styleClass>
+                              <String fx:value="table-icon" />
+                              <String fx:value="rightBorder" />
+                           </styleClass>
+                        </HBox>
+                        <Label alignment="CENTER" text="Important Domains">
+                           <padding>
+                              <Insets left="5.0" right="15.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <ListView prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <URL value="@internet.css" />
+      <URL value="@../global.css" />
+   </stylesheets>
+</AnchorPane>

@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="592.0" prefWidth="1062.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <content>
+      <AnchorPane layoutX="100.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="1060.0" style="-fx-background-color: white; -fx-border-color: cdcdcd;">
+         <children>
+            <GridPane layoutX="50.0" layoutY="50.0" prefHeight="192.0" prefWidth="320.0" styleClass="home-table">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <HBox spacing="10.0" styleClass="hardwareInfoHeader" GridPane.columnSpan="2">
+                     <children>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+                                 <viewport>
+                                    <Rectangle2D height="16.0" minX="17.0" minY="204.0" width="16.0" />
+                                 </viewport>
+                              </ImageView>
+                           </children>
+                           <styleClass>
+                              <String fx:value="table-icon" />
+                              <String fx:value="rightBorder" />
+                           </styleClass>
+                        </HBox>
+                        <Label text="Hardware Information">
+                           <padding>
+                              <Insets left="50.0" top="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Pane prefHeight="200.0" prefWidth="200.0" styleClass="infoPane" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                  <Pane layoutX="10.0" layoutY="37.0" prefHeight="200.0" prefWidth="200.0" styleClass="infoPane" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                  <Pane layoutX="10.0" layoutY="91.0" prefHeight="200.0" prefWidth="200.0" styleClass="infoPane" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+                  <HBox layoutX="10.0" layoutY="10.0" spacing="25.0" styleClass="rightBorder" GridPane.rowIndex="1">
+                     <children>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+                                 <viewport>
+                                    <Rectangle2D height="16.0" minY="918.0" width="16.0" />
+                                 </viewport>
+                              </ImageView>
+                           </children>
+                           <styleClass>
+                              <String fx:value="table-icon" />
+                              <String fx:value="rightBorder" />
+                           </styleClass>
+                        </HBox>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Processor" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="11.0" layoutY="43.0" spacing="25.0" styleClass="rightBorder" GridPane.rowIndex="2">
+                     <children>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+                                 <viewport>
+                                    <Rectangle2D height="16.0" minY="1224.0" width="16.0" />
+                                 </viewport>
+                              </ImageView>
+                           </children>
+                           <styleClass>
+                              <String fx:value="table-icon" />
+                              <String fx:value="rightBorder" />
+                           </styleClass>
+                        </HBox>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Hard Drive" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="11.0" layoutY="75.0" spacing="25.0" styleClass="rightBorder" GridPane.rowIndex="3">
+                     <children>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+                                 <viewport>
+                                    <Rectangle2D height="16.0" minY="1972.0" width="16.0" />
+                                 </viewport>
+                              </ImageView>
+                           </children>
+                           <styleClass>
+                              <String fx:value="table-icon" />
+                              <String fx:value="rightBorder" />
+                           </styleClass>
+                        </HBox>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Memory" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="11.0" layoutY="107.0" spacing="25.0" styleClass="rightBorder" GridPane.rowIndex="4">
+                     <children>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+                                 <viewport>
+                                    <Rectangle2D height="16.0" minY="1649.0" width="16.0" />
+                                 </viewport>
+                              </ImageView>
+                           </children>
+                           <styleClass>
+                              <String fx:value="table-icon" />
+                              <String fx:value="rightBorder" />
+                           </styleClass>
+                        </HBox>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Internet" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="11.0" layoutY="139.0" spacing="25.0" styleClass="rightBorder" GridPane.rowIndex="5">
+                     <children>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+                                 <viewport>
+                                    <Rectangle2D height="16.0" minX="17.0" minY="697.0" width="16.0" />
+                                 </viewport>
+                              </ImageView>
+                           </children>
+                           <styleClass>
+                              <String fx:value="table-icon" />
+                              <String fx:value="rightBorder" />
+                           </styleClass>
+                        </HBox>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="External HD" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="1 GHz" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="176.0" layoutY="43.0" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="500 MB" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="176.0" layoutY="75.0" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="500 MB" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="176.0" layoutY="107.0" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <children>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="1 Mbit/s" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="176.0" layoutY="139.0" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <children>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="None" />
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+            <GridPane layoutX="500.0" layoutY="50.0" prefHeight="192.0" prefWidth="450.0" styleClass="home-table">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <HBox spacing="10.0" styleClass="hardwareInfoHeader" GridPane.columnSpan="2">
+                     <children>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+                                 <viewport>
+                                    <Rectangle2D height="16.0" minY="1768.0" width="16.0" />
+                                 </viewport>
+                              </ImageView>
+                           </children>
+                           <styleClass>
+                              <String fx:value="table-icon" />
+                              <String fx:value="rightBorder" />
+                           </styleClass>
+                        </HBox>
+                        <Label maxHeight="1.7976931348623157E308" text="General Information">
+                           <HBox.margin>
+                              <Insets left="120.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Pane prefHeight="200.0" prefWidth="200.0" styleClass="infoPane" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                  <Pane layoutX="10.0" layoutY="37.0" prefHeight="200.0" prefWidth="200.0" styleClass="infoPane" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                  <Pane layoutX="10.0" layoutY="91.0" prefHeight="200.0" prefWidth="200.0" styleClass="infoPane" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+                  <HBox layoutX="10.0" layoutY="10.0" spacing="25.0" styleClass="rightBorder" GridPane.rowIndex="1">
+                     <children>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+                                 <viewport>
+                                    <Rectangle2D height="16.0" minY="1139.0" width="16.0" />
+                                 </viewport>
+                              </ImageView>
+                           </children>
+                           <styleClass>
+                              <String fx:value="table-icon" />
+                              <String fx:value="rightBorder" />
+                           </styleClass>
+                        </HBox>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Reputation" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="11.0" layoutY="43.0" spacing="25.0" styleClass="rightBorder" GridPane.rowIndex="2">
+                     <children>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+                                 <viewport>
+                                    <Rectangle2D height="16.0" minX="17.0" minY="408.0" width="16.0" />
+                                 </viewport>
+                              </ImageView>
+                           </children>
+                           <styleClass>
+                              <String fx:value="table-icon" />
+                              <String fx:value="rightBorder" />
+                           </styleClass>
+                        </HBox>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Running Tasks" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="11.0" layoutY="75.0" spacing="25.0" styleClass="rightBorder" GridPane.rowIndex="3">
+                     <children>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+                                 <viewport>
+                                    <Rectangle2D height="16.0" minY="1037.0" width="16.0" />
+                                 </viewport>
+                              </ImageView>
+                           </children>
+                           <styleClass>
+                              <String fx:value="table-icon" />
+                              <String fx:value="rightBorder" />
+                           </styleClass>
+                        </HBox>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Connected To" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="11.0" layoutY="107.0" spacing="25.0" styleClass="rightBorder" GridPane.rowIndex="4">
+                     <children>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+                                 <viewport>
+                                    <Rectangle2D height="16.0" minY="1513.0" width="16.0" />
+                                 </viewport>
+                              </ImageView>
+                           </children>
+                           <styleClass>
+                              <String fx:value="table-icon" />
+                              <String fx:value="rightBorder" />
+                           </styleClass>
+                        </HBox>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Mission" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="11.0" layoutY="139.0" spacing="25.0" styleClass="rightBorder" GridPane.rowIndex="5">
+                     <children>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+                                 <viewport>
+                                    <Rectangle2D height="16.0" minY="697.0" width="16.0" />
+                                 </viewport>
+                              </ImageView>
+                           </children>
+                           <styleClass>
+                              <String fx:value="table-icon" />
+                              <String fx:value="rightBorder" />
+                           </styleClass>
+                        </HBox>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Clan" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="176.0" layoutY="43.0" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="176.0" layoutY="75.0" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="No one" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="176.0" layoutY="107.0" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <children>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="None" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="176.0" layoutY="139.0" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <children>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="None" />
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+            <HBox maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="1062.0" spacing="25.0" style="-fx-pref-height: 37;" styleClass="hardwareInfoHeader">
+               <children>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+                           <viewport>
+                              <Rectangle2D height="16.0" minY="1598.0" width="16.0" />
+                           </viewport>
+                        </ImageView>
+                     </children>
+                     <styleClass>
+                        <String fx:value="table-icon" />
+                        <String fx:value="rightBorder" />
+                     </styleClass>
+                  </HBox>
+                  <Label maxHeight="1.7976931348623157E308" text="Control Panel">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <VBox layoutX="93.0" layoutY="257.0" prefHeight="295.0" prefWidth="235.0">
+               <children>
+                  <HBox maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="1062.0" spacing="25.0" style="-fx-pref-height: 37;" styleClass="hardwareInfoHeader-full">
+                     <children>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+                                 <viewport>
+                                    <Rectangle2D height="16.0" minX="17.0" minY="459.0" width="16.0" />
+                                 </viewport>
+                              </ImageView>
+                           </children>
+                           <styleClass>
+                              <String fx:value="table-icon" />
+                              <String fx:value="rightBorder" />
+                           </styleClass>
+                        </HBox>
+                        <Label maxHeight="1.7976931348623157E308" text="FBI Wanted List">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <ListView prefHeight="259.0" prefWidth="235.0" />
+               </children>
+            </VBox>
+         </children>
+         <stylesheets>
+            <URL value="@../icons.css" />
+            <URL value="@home.css" />
+         </stylesheets>
+      </AnchorPane>
+   </content>
+</ScrollPane>

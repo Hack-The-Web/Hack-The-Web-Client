@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="590.0" prefWidth="1062.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <stylesheets>
+      <URL value="@hacked-database.css" />
+      <URL value="@../global.css" />
+   </stylesheets>
+   <children>
+      <TabPane prefHeight="590.0" prefWidth="1062.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Owned Systems">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <VBox AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="26.0" prefWidth="1062.0" spacing="10.0" styleClass="header-background">
+                                 <children>
+                                    <Label maxHeight="1.7976931348623157E308" text="Search Database" />
+                                    <TextField promptText="Enter information" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </padding>
+                              </HBox>
+                              <TableView prefHeight="517.0" prefWidth="1062.0">
+                                <columns>
+                                  <TableColumn editable="false" prefWidth="175.0" text="System Information" />
+                                  <TableColumn editable="false" prefWidth="138.0" text="Public Address" />
+                                    <TableColumn editable="false" prefWidth="122.0" text="Username" />
+                                    <TableColumn editable="false" prefWidth="121.0" text="Password" />
+                                    <TableColumn editable="false" prefWidth="132.0" text="HDD Usage" />
+                                    <TableColumn editable="false" prefWidth="168.0" text="Internet" />
+                                    <TableColumn editable="false" prefWidth="205.0" text="Viruses" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+            </content>
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../he16.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D height="16.0" minY="1479.0" width="16.0" />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+          </Tab>
+            <Tab text="Bank Accounts">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox>
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="26.0" prefWidth="1062.0" spacing="10.0" styleClass="header-background">
+                                 <children>
+                                    <Label maxHeight="1.7976931348623157E308" text="Search Bank Accounts" />
+                                    <TextField promptText="Enter information" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </padding>
+                              </HBox>
+                              <TableView prefHeight="517.0" prefWidth="1062.0">
+                                 <columns>
+                                    <TableColumn editable="false" prefWidth="175.0" text="Bank Name" />
+                                    <TableColumn editable="false" prefWidth="138.0" text="Public Address" />
+                                    <TableColumn editable="false" prefWidth="180.0" text="Number" />
+                                    <TableColumn editable="false" prefWidth="249.0" text="Password" />
+                                    <TableColumn editable="false" prefWidth="319.0" text="Balance" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+               </content>
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../he16.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D height="16.0" minY="1445.0" width="16.0" />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+            </Tab>
+            <Tab text="BTC Keys">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox>
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="26.0" prefWidth="1062.0" spacing="10.0" styleClass="header-background">
+                                 <children>
+                                    <Label maxHeight="1.7976931348623157E308" text="Search BTC Keys" />
+                                    <TextField promptText="Enter information" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </padding>
+                              </HBox>
+                              <TableView prefHeight="517.0" prefWidth="1062.0">
+                                 <columns>
+                                    <TableColumn editable="false" prefWidth="354.0" text="Public Key" />
+                                    <TableColumn editable="false" prefWidth="435.0" text="Private Key" />
+                                    <TableColumn editable="false" prefWidth="272.0" text="BTC Balance" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+               </content>
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../he16.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D height="16.0" minY="153.0" width="16.0" />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+            </Tab>
+            <Tab text="Collect Money">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox>
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="26.0" prefWidth="1062.0" spacing="10.0" styleClass="header-background">
+                                 <padding>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </padding>
+                                 <children>
+                                    <Label text="Select Bank Account" />
+                                    <ChoiceBox prefWidth="150.0" />
+                                    <Label layoutX="314.0" layoutY="21.0" text="Select BTC Address" />
+                                    <ChoiceBox layoutX="538.0" layoutY="16.0" prefWidth="150.0" />
+                                    <Button mnemonicParsing="false" styleClass="legionhe-black-button" text="Collect Money" />
+                                 </children>
+                              </HBox>
+                              <TableView prefHeight="517.0" prefWidth="1062.0">
+                                 <columns>
+                                    <TableColumn editable="false" prefWidth="354.0" text="Virus Name" />
+                                    <TableColumn editable="false" prefWidth="423.0" text="Time Running" />
+                                    <TableColumn editable="false" prefWidth="284.0" text="Income Type" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+               </content>
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../he16.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D height="16.0" minY="1462.0" width="16.0" />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+            </Tab>
+            <Tab text="DDoS">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox>
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="26.0" prefWidth="1062.0" spacing="10.0" styleClass="header-background">
+                                 <padding>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </padding>
+                                 <children>
+                                    <Label text="Target IP Address" />
+                                    <TextField promptText="Enter ip address" />
+                                    <Button mnemonicParsing="false" styleClass="legionhe-black-button" text="Launch Attack" />
+                                 </children>
+                              </HBox>
+                              <TableView prefHeight="517.0" prefWidth="1062.0">
+                                 <columns>
+                                    <TableColumn editable="false" prefWidth="498.0" text="Virus Name" />
+                                    <TableColumn editable="false" prefWidth="563.0" text="Version" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../he16.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D height="16.0" minY="51.0" width="16.0" />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

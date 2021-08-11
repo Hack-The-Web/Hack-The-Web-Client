@@ -1,0 +1,117 @@
+.address-box {
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+}
+
+.search-button {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+.search-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #FFFFFF 0%, black 25%);
+    -fx-cursor: hand;
+}
+
+.internet-viewport {
+    -fx-border-color: #cdcdcd;
+    -fx-border-style: solid solid solid solid;
+    -fx-border-width: 1px;
+}
+
+.tab-pane .tab-header-background {
+    -fx-background-color: linear-gradient(to bottom, #FFFFFF 0%, #EEEEEE 100%);
+    -fx-border-color: #cdcdcd;
+    -fx-border-style: hidden hidden solid hidden;
+    -fx-border-width: 1px;
+}
+
+.tab-pane:top .tab-header-area .headers-region .tab:selected:top {
+    -fx-background-color: linear-gradient(to top, #FFFFFF 0%, #EEEEEE 100%);
+    -fx-border-color: #cdcdcd;
+    -fx-border-style: solid solid solid solid;
+    -fx-border-width: 1px;
+}
+
+.tab-pane:top .tab-header-area .headers-region .tab {
+    -fx-background-color: linear-gradient(to bottom, #FFFFFF 0%, #EEEEEE 100%);
+    -fx-border-color: #cdcdcd;
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+}
+
+.tab-pane:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator {
+    -fx-border-style: hidden;
+}
+
+.login-icon {
+    -fx-border-color: #cdcdcd;
+    -fx-border-style: hidden solid hidden hidden;
+    -fx-border-width: 1px;
+    -fx-pref-width: 28px;
+    -fx-pref-height: 30;
+}
+
+.login-box {
+
+    -fx-background-color: #f0f0f0, lightgrey;
+    -fx-background-insets: 0, 150 0 0 0;
+
+}
+
+.login-button {
+    -fx-background-color: linear-gradient(to bottom, #3F3F3F 0%, #222222 100%);
+    -fx-text-fill: white;
+}
+
+.login-button:hover {
+    -fx-cursor: hand;
+    -fx-background-color: black;
+}
+
+.full-border {
+    -fx-border-color: #cdcdcd;
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+}
+
+.upload-btn {
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(to bottom, #08c 0%, #04c 100%);
+    -fx-background-repeat: repeat-x;
+    -fx-border-color: #04c #04c #002a80;
+}
+
+.upload-btn:hover {
+    -fx-background-color: #04c;
+    -fx-cursor: hand;
+}
+
+.hardwareInfoHeader {
+
+    -fx-background-color: linear-gradient(to bottom, #FFFFFF 0%, #EEEEEE 100%);
+    -fx-pref-height: 36px;
+    -fx-border-color: #cdcdcd;
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+}
+
+.home-table {
+    -fx-border-style: solid;
+    -fx-border-color: #cdcdcd;
+    -fx-border-width: 1px;
+}
+
+.rightBorder {
+    -fx-border-color: #cdcdcd;
+    -fx-border-style: hidden solid hidden hidden ;
+    -fx-border-width: 1px;
+}
+
+.table-icon {
+    -fx-pref-width: 38px;
+    -fx-pref-height: 36px;
+}
+

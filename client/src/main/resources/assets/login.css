@@ -1,0 +1,16 @@
+.base {
+    -fx-background-color: black;
+}
+
+.label {
+    -fx-alignment: center;
+    -fx-font-size: 18px;
+}
+
+.fa-icon {
+    -fx-alignment: center;
+}
+
+.regInput {
+    -fx-hbar-policy: right;
+}

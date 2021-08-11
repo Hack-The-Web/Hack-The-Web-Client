@@ -1,0 +1,23 @@
+.nav-back {
+    -fx-background-color: #3f3f3f;
+    -fx-border-color: #4e4e4e;
+    -fx-border-width: 2px;
+    -fx-pref-width: 220px;
+}
+.nav-back .label {
+    -fx-text-fill: white;
+    -fx-alignment: center;
+}
+.nav-button {
+    -fx-alignment: center;
+    -fx-font-size: 16px;
+    -fx-border-color: #4e4e4e;
+    -fx-border-width: 1px;
+    -fx-border-style: solid hidden solid hidden;
+    -fx-pref-height: 40px;
+    -fx-cursor: hand;
+}
+
+.nav-button:hover {
+    -fx-background-color: #2b2b2b;
+}
