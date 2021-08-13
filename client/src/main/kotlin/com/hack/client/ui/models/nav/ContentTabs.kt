@@ -15,7 +15,8 @@ enum class ContentTabs(val displayName: String) {
     RANKING("Ranking"),
     FAME("Hall of Fame"),
     NONE(""),
-    DEVELOPER("Developer Tools");
+    DEVELOPER("Developer Tools"),
+    GAMEFRAME("game_frame");
 
     override fun toString(): String {
         return this.displayName

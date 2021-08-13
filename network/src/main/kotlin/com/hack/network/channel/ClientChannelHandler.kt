@@ -7,10 +7,11 @@ import com.hack.network.Session
 import com.hack.network.channel.login.LoginDecoder
 import com.hack.network.channel.login.LoginEncoder
 import com.hack.network.channel.packets.IncomingPacket
-import com.hack.network.channel.packets.OutgoingPacket
+import io.netty.channel.ChannelHandler
 import io.netty.channel.ChannelHandlerContext
 import io.netty.channel.ChannelInboundHandlerAdapter
 
+@ChannelHandler.Sharable
 class ClientChannelHandler(val loginInfo: LoginInformation, val onSuccessfulLogin: (Session) -> Unit) : ChannelInboundHandlerAdapter() {
 
     override fun channelActive(ctx: ChannelHandlerContext) {
@@ -30,4 +31,8 @@ class ClientChannelHandler(val loginInfo: LoginInformation, val onSuccessfulLogi
         }
     }
 
+    override fun exceptionCaught(ctx: ChannelHandlerContext, cause: Throwable) {
+        cause.printStackTrace()
+        ctx.close()
+    }
 }

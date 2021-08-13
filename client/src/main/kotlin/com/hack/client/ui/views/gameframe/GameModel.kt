@@ -1,4 +1,4 @@
-package com.hack.client.ui.views.game
+package com.hack.client.ui.views.gameframe
 
 import com.hack.client.ui.models.nav.ContentTabs
 import javafx.beans.property.SimpleObjectProperty

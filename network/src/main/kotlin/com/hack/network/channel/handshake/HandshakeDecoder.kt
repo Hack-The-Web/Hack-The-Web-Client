@@ -14,7 +14,6 @@ class HandshakeDecoder : ByteToMessageDecoder() {
         if(successful) {
             out.add(HandshakeResponse(1))
         } else {
-            buf.release()
             ctx.disconnect()
         }
     }

@@ -1,4 +1,4 @@
-package com.hack.client.ui.views.game
+package com.hack.client.ui.views.gameframe
 
 import com.hack.client.ui.models.nav.ContentTabs
 import javafx.scene.control.Button
@@ -7,10 +7,9 @@ import javafx.scene.layout.AnchorPane
 import javafx.scene.layout.HBox
 import javafx.scene.layout.Pane
 import tornadofx.View
-import tornadofx.onChange
 import tornadofx.replaceChildren
 
-class GameView : View("Hack The Web") {
+class GameFrameView : View("Hack The Web") {
     override val root: Pane by fxml("/assets/game.fxml")
 
     val gameModel: GameModel by inject()
@@ -47,6 +46,7 @@ class GameView : View("Hack The Web") {
 
     init {
         controller.watchForWidgetChange()
+        controller.subscribePackets()
         addressLabel.textProperty().bind(gameModel.address)
         serverTime.textProperty().bind(gameModel.serverTime)
         onlinePlayers.textProperty().bind(gameModel.onlinePlayers)
@@ -68,6 +68,8 @@ class GameView : View("Hack The Web") {
         rankingBtn.setOnMouseClicked { gameModel.activeWidget.set(ContentTabs.RANKING) }
         fameBtn.setOnMouseClicked { gameModel.activeWidget.set(ContentTabs.FAME) }
         devBtn.setOnMouseClicked { gameModel.activeWidget.set(ContentTabs.DEVELOPER) }
+
+        logoutBtn.setOnAction { controller.handleLogoutButtonAction(it) }
 
         gameModel.content.addListener { _, old, new ->
             if(old != new && new != null) {
