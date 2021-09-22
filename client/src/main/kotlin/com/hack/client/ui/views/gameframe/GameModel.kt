@@ -1,6 +1,7 @@
 package com.hack.client.ui.views.gameframe
 
 import com.hack.client.ui.models.nav.ContentTabs
+import javafx.beans.property.SimpleLongProperty
 import javafx.beans.property.SimpleObjectProperty
 import javafx.beans.property.SimpleStringProperty
 import javafx.scene.Node
@@ -18,4 +19,6 @@ class GameModel : ViewModel() {
     val content = bind { SimpleObjectProperty<Node>(this, "content") }
 
     val activeWidget = bind { SimpleObjectProperty(this, "active_widget", ContentTabs.HOME) }
+
+    val events = bind { SimpleStringProperty(this, "log", "") }
 }

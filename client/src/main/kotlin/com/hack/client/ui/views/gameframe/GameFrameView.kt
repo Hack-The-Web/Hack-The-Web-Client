@@ -76,8 +76,6 @@ class GameFrameView : View("Hack The Web") {
                 content.replaceChildren(new)
             }
         }
-
-        controller.updateContentOnLogin()
     }
 
 }

@@ -22,7 +22,6 @@ class Session(private val ctx: ChannelHandlerContext) : NetworkSession {
         with(transformer) {
             data.encode()
         }
-        println("Sending Outgoing Packet ${transformer.opcode} - ${ctx.pipeline()["encoder"]::class.java.name}")
         ctx.channel().writeAndFlush(OutgoingPacket(transformer.opcode, stream.toByteArray()))
     }
 

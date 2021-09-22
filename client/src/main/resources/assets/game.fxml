@@ -13,8 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<Pane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0">
          <top>
@@ -134,7 +133,7 @@
                                     <Insets left="20.0" />
                                  </HBox.margin>
                               </FontAwesomeIconView>
-                              <Label text="Log File" />
+                              <Label text="System Events" />
                            </children>
                            <cursor>
                               <Cursor fx:constant="HAND" />
